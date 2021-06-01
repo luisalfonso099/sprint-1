@@ -1,0 +1,564 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+header {
+  position: relative;
+  top: 20px;
+  width: 100%;
+}
+.logo {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  align-self: flex-start;
+  position: absolute;
+  left: 100px;
+}
+#btn-menu {
+  display: none;
+}
+header label {
+  display: none;
+  padding: 10px;
+}
+header label:hover {
+  cursor: pointer;
+}
+.menu ul {
+  margin-right: 80px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu li a {
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  text-shadow: 0px 0px 0.8px rgb(107, 98, 98);
+  color: rgb(66, 61, 61);
+  display: block;
+  padding: 0px 20px;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: rgb(24, 209, 209);
+  text-decoration: line-through;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    top: 15px;
+    left: 16px;
+  }
+  header {
+    position: absolute;
+    top: 0px;
+  }
+  header label {
+    display: block;
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  .menu {
+    position: absolute;
+    background-color: rgb(60, 60, 250);
+    width: 100%;
+    margin-top: -100%;
+    transition: all 1s;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu ul a {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 15px 0;
+    position: relative;
+    left: 10px;
+  }
+  header label {
+    position: absolute;
+    left: 90%;
+  }
+
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+    position: relative;
+    top: 65px;
+  }
+}
+
+/* Aqui termina el encabezado de navegacion y comienza el texto principal */
+
+.text-principal {
+  margin-left: 200px;
+  margin-top: 120px;
+  margin-right: 100px;
+}
+.text-principal h1 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  color: #060a24;
+}
+
+.btn-conocer-mas {
+  margin-top: 56px;
+}
+.btn-conocer-mas,
+button {
+  font-family: monospace;
+  font-size: 21px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  line-height: 24px;
+  width: 226px;
+  height: 56px;
+  background-color: #06f5bd;
+  border: none;
+}
+.btn-conocer-mas button:hover {
+  transition: 0.7s;
+  color: rgb(255, 255, 250);
+  background-image: linear-gradient(
+    to right,
+    rgb(8, 237, 245),
+    rgb(66, 89, 218)
+  );
+}
+.text-d {
+  font-family: monospace;
+  font-size: 18px;
+  line-height: 24px;
+}
+.text-t {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .text-d {
+    display: none;
+  }
+  .text-t {
+    margin-top: 14px;
+    display: flex;
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  .text-principal {
+    margin-top: 29;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .btn-conocer-mas {
+    width: 100%;
+  }
+  button {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Aqui comienza la seccion de los potcast */
+
+.podcast {
+  margin-top: 5px;
+  width: 100%;
+  height: 1143px;
+  background-image: linear-gradient(
+    to right,
+    rgb(41, 6, 238),
+    rgb(27, 58, 233)
+  );
+  clip-path: polygon(0px 110px, 100% 0px, 100% 850px, 0px 1000px);
+}
+.targetas {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.targetas iframe {
+  margin: 30px 0;
+}
+.podcast h2 {
+  display: inline-block;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #fdffff;
+  margin-left: 200px;
+  margin-top: 186px;
+}
+
+@media (max-width: 900px) {
+  .targetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .targetas iframe {
+    width: 80%;
+    margin: 15px 0;
+  }
+  .podcast {
+    margin-top: 5px;
+    width: 100%;
+    height: 1400px;
+    background-image: linear-gradient(
+      to right,
+      rgb(41, 6, 238),
+      rgb(27, 58, 233)
+    );
+    clip-path: polygon(0px 60px, 100% 0px, 100% 1350px, 0px 1400px);
+  }
+  .podcast h2 {
+    display: inline-block;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #fdffff;
+    margin-left: 100px;
+    margin-top: 106px;
+  }
+}
+/* aqui termina la seccion de podcast */
+.de-donde-venimos {
+  width: 100%;
+  margin-top: -200px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.phone {
+  margin-top: -90px;
+  width: 458px;
+  height: 660px;
+  z-index: 2;
+}
+.phone img {
+  width: 458px;
+  height: 660px;
+}
+.text {
+  width: 524px;
+  height: 234px;
+  font-family: monospace;
+  margin-left: 173px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #060a24;
+  line-height: 24px;
+}
+.text-de-donde-venimos h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  margin-left: 173px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 55px;
+  color: #060a24;
+}
+
+@media (max-width: 900px) {
+  .de-donde-venimos {
+    width: 100%;
+    margin-top: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .phone {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 360px;
+    height: 520px;
+    z-index: 2;
+  }
+  .phone img {
+    width: 360px;
+    height: 520px;
+  }
+  .text {
+    width: auto;
+    height: auto;
+    font-family: monospace;
+    margin-left: 0px;
+    font-size: 19px;
+    font-weight: 400;
+    color: #060a24;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  .text p {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .text-de-donde-venimos h2 {
+    font-family: "Roboto Condensed", sans-serif;
+    margin-top: 37px;
+    margin-left: 16px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 55px;
+    color: #060a24;
+    letter-spacing: 0;
+  }
+}
+
+/* aqui comienza la seccion de invitados/as  */
+
+.invitados h2 {
+  margin-top: 44px;
+  margin-left: 200px;
+  margin-bottom: 36px;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 200;
+  font-size: 48px;
+  color: #060a24;
+  letter-spacing: 0;
+}
+.invitados-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.invitados-fotos img {
+  margin: 0;
+  width: 33.3%;
+  height: 364px;
+}
+@media (max-width: 900px) {
+  .invitados h2 {
+    margin-top: 44px;
+    margin-left: 16px;
+    margin-bottom: 36px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size: 48px;
+    color: #060a24;
+    letter-spacing: 0;
+  }
+  .invitados-fotos {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 0;
+  }
+  .invitados-fotos img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Aqui comienza la seccion de nuestros temas   */
+
+.nuestros-temas h2 {
+  margin-top: 44px;
+  margin-left: 200px;
+  margin-bottom: 36px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+  color: #110b11f3;
+  letter-spacing: 0;
+}
+.iconos-nuestros-temas {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.iconos-nuestros-temas img {
+  width: 260px;
+  height: 130px;
+}
+.titulo-logo {
+  width: 220px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .nuestros-temas h2 {
+    margin-left: 16px;
+    font-size: 36px;
+  }
+  .iconos-nuestros-temas {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .iconos-nuestros-temas img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+  }
+  .titulo-logo {
+    width: 220px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    margin-bottom: 60px;
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Aqui comienza la seccion nuestros temas  */
+.novedades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 518px;
+  margin-top: 34px;
+  background-image: linear-gradient(
+    to right,
+    rgb(41, 6, 238),
+    rgb(60, 86, 231)
+  );
+  clip-path: polygon(0px 100px, 100% 0px, 100% 518px, 0px 518px);
+}
+.novedades h2 {
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 48px;
+  color: rgb(250, 250, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.novedades button {
+  font-family: monospace;
+  font-weight: 400;
+  background-color: #06f5bd;
+  margin-top: 36px;
+  width: 345px;
+  height: 56px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+.novedades a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.novedades button:hover {
+  transition: 0.7s;
+  color: rgb(250, 255, 240);
+  background-image: linear-gradient(
+    to right,
+    rgb(8, 237, 245),
+    rgb(66, 89, 218)
+  );
+}
+@media (max-width: 900px) {
+  .novedades {
+    height: 410px;
+    margin-top: 0px;
+    clip-path: polygon(0px 50px, 100% 0px, 100% 410px, 0px 410px);
+  }
+  .novedades button {
+    margin: 36px 16px;
+  }
+}
+
+/* Aqui comienza el pie de pagina  */
+
+.pie {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copy {
+  font-family: monospace;
+  margin-left: 100px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.iconos {
+  margin-right: 100px;
+  margin-top: 8px;
+}
+.iconos a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.iconos i {
+  margin-top: 10px;
+  margin-right: 36px;
+  font-size: 35px;
+  width: 40px;
+  height: 45px;
+}
+.spotify:hover {
+  color: rgb(45, 210, 45);
+  font-size: 40px;
+  transition: 0.7s;
+}
+.instagram:hover {
+  color: rgb(223, 28, 61);
+  font-size: 40px;
+  transition: 0.7s;
+}
+.twitter:hover {
+  color: rgb(45, 130, 210);
+  font-size: 40px;
+  transition: 0.7s;
+}
+.facebook:hover {
+  color: rgb(26, 4, 150);
+  font-size: 40px;
+  transition: 0.7s;
+}
+.telegram:hover {
+  color: rgb(45, 172, 210);
+  font-size: 40px;
+  transition: 0.7s;
+}
+@media (max-width: 900px) {
+  .pie {
+    display: inline-block;
+  }
+  .copy {
+    font-family: monospace;
+    margin-left: 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 24px;
+  }
+  .iconos {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .iconos i {
+    margin-right: 0;
+  }
+}
